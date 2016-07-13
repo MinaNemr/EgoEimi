@@ -1,16 +1,19 @@
 app.controller('mainController', function($scope, $http){
 	$scope.title= 'Ego Eimi';
-		$http.get('/api/teams/top_teams').success(function(data){
+		$http.get('/api/teams/top_four').success(function(data){
 			console.log('bla');
-		    $scope.topTeams = data;
-		    $scope.topTeams[0].bar = data[0].score * 0.01;
-		    $scope.topTeams[1].bar = data[1].score * 0.01;
-		    $scope.topTeams[2].bar = data[2].score * 0.01;
-		    $scope.topTeams[3].bar = data[3].score * 0.01;
-		    $scope.topTeams[4].bar = data[0].score * 0.01;
-		    $scope.topTeams[5].bar = data[1].score * 0.01;
-		    $scope.topTeams[6].bar = data[2].score * 0.01;
-		    $scope.topTeams[7].bar = data[3].score * 0.01;
+		    $scope.topFour = data;
+		    $scope.topFour[0].bar = data[0].score * 0.02;
+		    $scope.topFour[1].bar = data[1].score * 0.02;
+		    $scope.topFour[2].bar = data[2].score * 0.02;
+		    $scope.topFour[3].bar = data[3].score * 0.02;
+	    });
+	    $http.get('/api/teams/bottom_four').success(function(data){
+		    $scope.bottomFour = data;
+		    $scope.bottomFour[0].bar = data[0].score * 0.02;
+		    $scope.bottomFour[1].bar = data[1].score * 0.02;
+		    $scope.bottomFour[2].bar = data[2].score * 0.02;
+		    $scope.bottomFour[3].bar = data[3].score * 0.02;
 	    });
 
 	    $scope.teams = [

@@ -3,12 +3,12 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Team = mongoose.model('Team')
 
-router.route('/teams/top_four')
+router.route('/teams/top_teams')
 
 	//to get all teams with full data
 	.get(function(req, res){
 
-		Team.find().sort({'score': -1}).limit(4).exec(function (err,teams){
+		Team.find().sort({'score': -1}).exec(function (err,teams){
 			if(err){
 				return res.send(500,err);
 			}
@@ -17,18 +17,6 @@ router.route('/teams/top_four')
                 
 		});
 })
-
-router.route('/teams/bottom_four')
-
-    //to get all teams with full data
-    .get(function(req, res){
-        Team.find().sort({'score': 1}).limit(4).exec(function (err,teams){
-            if(err){
-                return res.send(500,err);
-            }
-            return res.send(teams);
-        });
-}) 
 
 router.route('/teams/:id')
 

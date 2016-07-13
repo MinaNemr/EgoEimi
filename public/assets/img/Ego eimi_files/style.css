@@ -4,9 +4,10 @@ body {
    
 }
 #inputs{
-	margin-top: 70px;
+	margin-top: 0px;
 	align-content: center;
-	width :1500px;
+	margin: 0 auto;
+	width :300px;
 }
 #bg {
   position: fixed; 
@@ -25,6 +26,7 @@ h1{
 	align: center;
 	font-family:"Arial Black", Gadget, sans-serif;
 	color: #535353;
+	margin-bottom: 30px;
 	margin-top: 0px;
 }
 
@@ -37,29 +39,19 @@ a {
 
 p{
 	align: center;
-	font-size: 30px;
+	font-size: 30;
 	font-family:"Arial Black", Gadget, sans-serif;
 }
 label{
 	font-size: 30px;
 }
-#s{
-	width: 200px;
-	font-size: 50px;
-}
 #select{
-	margin-left: 30px;
-	width: 300px;
-	font-size: 50px;
+	width: 150px;
 }
 #bla{
-	margin-top: 88px;
-	margin-left: 30px;
-	font-size: 50px;
+	margin-top: 42px;
 }
-#bla2{
-	font-size: 30px;
-}
+
 .submit-btn {
 	background-color: #b1dbff;
 	margin: 10px 0 10px 0;
@@ -76,7 +68,7 @@ label{
 	
 }
 .progress{
-	margin-top: 0px;
+	margin-top: 30px;
 	height: 40px;
 	margin-bottom: 0px;
 }
@@ -84,9 +76,5 @@ label{
 	background-color:transparent;
 	border: 0 none;
     box-shadow: none;
-    margin-bottom: 15px;
-}
-
-nav{
-	display: block;
+    margin-bottom: 70px;
 }
