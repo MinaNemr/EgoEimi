@@ -4,9 +4,10 @@ body {
    
 }
 #inputs{
+	margin-left: 130px;
 	margin-top: 70px;
 	align-content: center;
-	width :1500px;
+	width :1000px;
 }
 #bg {
   position: fixed; 
@@ -55,20 +56,11 @@ label{
 #bla{
 	margin-top: 88px;
 	margin-left: 30px;
+	width: 200px;
 	font-size: 50px;
 }
 #bla2{
 	font-size: 30px;
-}
-.submit-btn {
-	background-color: #b1dbff;
-	margin: 10px 0 10px 0;
-}
-
-.post {
-	padding: 10px;
-	margin-bottom: 5px;
-	border-radius: 5px;
 }
 
 #title{
