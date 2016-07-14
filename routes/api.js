@@ -8,17 +8,18 @@ router.route('/teams/top_teams')
 	//to get all teams with full data
 	.get(function(req, res){
 
-		Team.find().sort({'score': -1}).exec(function (err,teams){
+		Team.find().exec(function (err,teams){
 			if(err){
 				return res.send(500,err);
 			}
+            console.log(teams);
 			return res.send(teams);
             
                 
 		});
 })
 
-router.route('/teams/:id')
+router.route('/teams/:id/:addition')
 
 	//create
    .put(function(req,res){
@@ -26,7 +27,7 @@ router.route('/teams/:id')
             if(err)
                 res.send(err);
             console.log(Number(req.body.addition));
-            team.score = team.score + Number(req.body.addition);
+            team.score = team.score + Number(req.params.addition);
             team.save(function(err, team){
                 if(err){
                     res.send(err);

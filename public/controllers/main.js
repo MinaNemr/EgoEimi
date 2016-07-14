@@ -1,7 +1,6 @@
-app.controller('mainController', function($scope, $http){
+app.controller('mainController', function($scope, $http, $mdDialog){
 	$scope.title= 'Ego Eimi';
 		$http.get('/api/teams/top_teams').success(function(data){
-			console.log('bla');
 		    $scope.topTeams = data;
 		    $scope.topTeams[0].bar = data[0].score * 0.01;
 		    $scope.topTeams[1].bar = data[1].score * 0.01;
@@ -92,9 +91,45 @@ app.controller('mainController', function($scope, $http){
 	    ];
 
 	    $scope.submit = function(){
-	    	console.log($scope.selectedTeam);
-	    	console.log($scope.selectedBehavior);
-	    	console.log($scope.code);
+	    	if($scope.code == 159){
+	    		$http({
+					  method: 'PUT',
+					  url: '/api/teams/'+$scope.selectedTeam+'/'+$scope.selectedBehavior
+					}).then(function successCallback(response) {
+						console.log(response.data);
+						alert = $mdDialog.alert()
+				        .title('success')
+				        .textContent('Score Updated !!')
+				        .ok('Close');
+				      $mdDialog
+				          .show( alert )
+				          .finally(function() {
+				            alert = undefined;
+				          });
+					  }, function errorCallback(response) {
+					  	alert = $mdDialog.alert()
+				        .title('failure')
+				        .textContent('Score not Updated !!')
+				        .ok('Close');
+				      $mdDialog
+				          .show( alert )
+				          .finally(function() {
+				            alert = undefined;
+				          });
+					  });
+
+	    		
+		    }
+	    	else
+	    		alert = $mdDialog.alert()
+		        .title('error')
+		        .textContent('wrong code')
+		        .ok('Close');
+		      $mdDialog
+		          .show( alert )
+		          .finally(function() {
+		            alert = undefined;
+		          });
 	    }
 
 });

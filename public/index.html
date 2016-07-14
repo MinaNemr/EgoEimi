@@ -22,7 +22,7 @@
         </div>
       </nav>
         <div class="row" id="inputs">
-          <md-input-container id="s">
+          <md-input-container  flex-gt-sm id="s">
                 <label>Team</label>
                 <md-select ng-model="selectedTeam">
                   <md-option ng-repeat="team in teams" value="{{team.id}}">
@@ -30,7 +30,7 @@
                   </md-option>
                 </md-select>
               </md-input-container>
-              <md-input-container id="select">
+              <md-input-container flex-gt-sm id="select" >
                 <label>Behavior</label>
                 <md-select ng-model="selectedBehavior">
                   <md-option ng-repeat="behavior in behaviors" value="{{behavior.value}}" >
@@ -45,7 +45,7 @@
               <md-button  id="bla2"  class="md-raised md-warn" ng-click="submit()"> Submit!</md-button>
           </div>
           <div class="row" >
-            <div class="col-xs-3 col-sm-3" ng-repeat="team in topTeams">
+            <div class="col-lg-3" ng-repeat="team in topTeams| orderBy:'-score'" >
               <div class="thumbnail" >
                   <img ng-src="assets/img/{{team._id}}.png">
                   <div class="caption">

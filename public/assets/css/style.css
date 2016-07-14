@@ -4,7 +4,7 @@ body {
    
 }
 #inputs{
-	margin-top: 70px;
+	margin-top: 80px;
 	align-content: center;
 	width :1000px;
 }
@@ -17,7 +17,10 @@ body {
   min-width: 100%;
   min-height: 100%;
 }
-
+img{
+	height: 50px;
+	width: 300px;
+}
 .container{
 	margin-top: 0px;
 }
@@ -53,10 +56,10 @@ label{
 	font-size: 50px;
 }
 #bla{
-	margin-top: 88px;
+	margin-top: 65px;
 	margin-left: 30px;
 	width: 200px;
-	font-size: 50px;
+	font-size: 25px;
 }
 #bla2{
 	font-size: 30px;
@@ -80,4 +83,8 @@ label{
 
 nav{
 	display: block;
+}
+
+md-select{
+	font-size: 30px;
 }
