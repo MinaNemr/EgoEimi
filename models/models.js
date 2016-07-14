@@ -6,4 +6,12 @@ var teamSchema = new mongoose.Schema({
 	score: Number
 })
 
+var boySchema = new mongoose.Schema({
+	_id: Number,
+	team: Number,
+	score: Number,
+	attended: Number
+})
+
+mongoose.model('Boy', boySchema);
 mongoose.model('Team', teamSchema);
