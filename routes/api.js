@@ -26,7 +26,6 @@ router.route('/teams/:id/:addition')
      	Team.findById(req.params.id, function(err, team){
             if(err)
                 res.send(err);
-            console.log(Number(req.body.addition));
             team.score = team.score + Number(req.params.addition);
             team.save(function(err, team){
                 if(err){
