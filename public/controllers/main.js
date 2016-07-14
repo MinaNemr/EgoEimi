@@ -107,15 +107,6 @@ app.controller('mainController', function($scope, $http, $mdDialog){
 						    $scope.topTeams[6].bar = data[2].score * 0.01;
 						    $scope.topTeams[7].bar = data[3].score * 0.01;
 					    });
-						alert = $mdDialog.alert()
-				        .title('success')
-				        .textContent('Score Updated !!')
-				        .ok('Close');
-				      $mdDialog
-				          .show( alert )
-				          .finally(function() {
-				            alert = undefined;
-				          });
 					  }, function errorCallback(response) {
 					  	alert = $mdDialog.alert()
 				        .title('failure')
