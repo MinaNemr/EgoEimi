@@ -2,14 +2,14 @@ app.controller('mainController', function($scope, $http, $mdDialog){
 	$scope.title= 'Ego Eimi';
 		$http.get('/api/teams/top_teams').success(function(data){
 		    $scope.topTeams = data;
-		    $scope.topTeams[0].bar = data[0].score * 0.01;
-		    $scope.topTeams[1].bar = data[1].score * 0.01;
-		    $scope.topTeams[2].bar = data[2].score * 0.01;
-		    $scope.topTeams[3].bar = data[3].score * 0.01;
-		    $scope.topTeams[4].bar = data[0].score * 0.01;
-		    $scope.topTeams[5].bar = data[1].score * 0.01;
-		    $scope.topTeams[6].bar = data[2].score * 0.01;
-		    $scope.topTeams[7].bar = data[3].score * 0.01;
+		    $scope.topTeams[0].bar = data[0].score * 0.17;
+		    $scope.topTeams[1].bar = data[1].score * 0.17;
+		    $scope.topTeams[2].bar = data[2].score * 0.17;
+		    $scope.topTeams[3].bar = data[3].score * 0.17;
+		    $scope.topTeams[4].bar = data[0].score * 0.17;
+		    $scope.topTeams[5].bar = data[1].score * 0.17;
+		    $scope.topTeams[6].bar = data[2].score * 0.17;
+		    $scope.topTeams[7].bar = data[3].score * 0.17;
 	    });
 
 	    $scope.teams = [
@@ -91,21 +91,21 @@ app.controller('mainController', function($scope, $http, $mdDialog){
 	    ];
 
 	    $scope.submit = function(){
-	    	if($scope.code == 159){
+	    	if($scope.code == 171717){
 	    		$http({
 					  method: 'PUT',
 					  url: '/api/teams/'+$scope.selectedTeam+'/'+$scope.selectedBehavior
 					}).then(function successCallback(response) {
 						$http.get('/api/teams/top_teams').success(function(data){
 						    $scope.topTeams = data;
-						    $scope.topTeams[0].bar = data[0].score * 0.01;
-						    $scope.topTeams[1].bar = data[1].score * 0.01;
-						    $scope.topTeams[2].bar = data[2].score * 0.01;
-						    $scope.topTeams[3].bar = data[3].score * 0.01;
-						    $scope.topTeams[4].bar = data[0].score * 0.01;
-						    $scope.topTeams[5].bar = data[1].score * 0.01;
-						    $scope.topTeams[6].bar = data[2].score * 0.01;
-						    $scope.topTeams[7].bar = data[3].score * 0.01;
+						    $scope.topTeams[0].bar = data[0].score * 0.17;
+						    $scope.topTeams[1].bar = data[1].score * 0.17;
+						    $scope.topTeams[2].bar = data[2].score * 0.17;
+						    $scope.topTeams[3].bar = data[3].score * 0.17;
+						    $scope.topTeams[4].bar = data[0].score * 0.17;
+						    $scope.topTeams[5].bar = data[1].score * 0.17;
+						    $scope.topTeams[6].bar = data[2].score * 0.17;
+						    $scope.topTeams[7].bar = data[3].score * 0.17;
 						    $mdDialog.hide();
 					    });
 					  }, function errorCallback(response) {
