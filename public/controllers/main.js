@@ -91,7 +91,7 @@ app.controller('mainController', function($scope, $http, $mdDialog){
 	    ];
 
 	    $scope.submit = function(){
-	    	if($scope.code == 171717){
+	    	if($scope.code == 777){
 	    		$http({
 					  method: 'PUT',
 					  url: '/api/teams/'+$scope.selectedTeam+'/'+$scope.selectedBehavior
