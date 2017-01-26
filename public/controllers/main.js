@@ -102,10 +102,10 @@ app.controller('mainController', function($scope, $http, $mdDialog){
 						    $scope.topTeams[1].bar = data[1].score * 0.017;
 						    $scope.topTeams[2].bar = data[2].score * 0.017;
 						    $scope.topTeams[3].bar = data[3].score * 0.017;
-						    $scope.topTeams[4].bar = data[0].score * 0.017;
-						    $scope.topTeams[5].bar = data[1].score * 0.017;
-						    $scope.topTeams[6].bar = data[2].score * 0.017;
-						    $scope.topTeams[7].bar = data[3].score * 0.017;
+						    $scope.topTeams[4].bar = data[4].score * 0.017;
+						    $scope.topTeams[5].bar = data[5].score * 0.017;
+						    $scope.topTeams[6].bar = data[6].score * 0.017;
+						    $scope.topTeams[7].bar = data[7].score * 0.017;
 						    $mdDialog.hide();
 					    });
 					  }, function errorCallback(response) {
